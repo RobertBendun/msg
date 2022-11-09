@@ -1,0 +1,63 @@
+:root {
+	--selection:          hsla(var(--accent-color), 80%, 30%, 100%);
+  --background:         hsla(var(--background-color), 100%, 10%, 100%);
+  --text:               hsla(var(--text-color), 0%, 90%, 100%);
+  --a-background:       hsla(var(--background-color), 90%, 5%, 100%);
+  --a-color:            hsla(var(--accent-color), 70%, 85%, 100%);
+}
+
+body {
+	background-color: var(--background);
+}
+
+::selection {
+  background: var(--selection);
+}
+
+.content {
+	width: 540px;
+	margin: auto;
+	margin-top: 10px;
+	font:109%/1.5 monospace;
+	color: var(--text);
+}
+
+header, footer {
+	display: grid;
+	grid-template-columns: repeat(3, 33%);
+}
+
+section {
+	padding-left: 3.0em;
+}
+
+header, section {
+	margin-bottom: 1em;
+}
+
+
+header > div:nth-child(2),
+footer > div:nth-child(2) {
+	text-align: center;
+}
+
+header > div:nth-child(3),
+footer > div:nth-child(3) {
+	text-align: right;
+}
+
+h1, h2 {
+	font-size: 1em;
+	margin: 0;
+}
+
+h2 {
+	margin-left: -3.0em;
+}
+
+a, a:active, a:visited {
+  color: var(--selection);
+  background-color: var(--a-background);
+	text-decoration: none;
+}
+
